@@ -24,7 +24,8 @@ module.exports = {
   // SLOW: only one worker.
   // maxWorkers: 1, //commented out
   
-  maxWorkers: '50%',
+  // maxWorkers: '50%',
+  maxWorkers: '75%', 
 
   // SLOW: coverage on every run.
   // collectCoverage: true,   // commented out
