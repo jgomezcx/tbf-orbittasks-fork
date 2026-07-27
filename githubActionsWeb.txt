@@ -1,0 +1,19 @@
+Install
+   │
+   ├──────────────┐
+   │              │
+Lint        Typecheck
+   │              │
+   └──────┬───────┘
+          │
+     API Tests (2 shards)
+      ├──────────┐
+      │          │
+    Shard 1   Shard 2
+          │
+      Web Tests
+          │
+      Build API
+      Build Web
+          │
+       Deploy
