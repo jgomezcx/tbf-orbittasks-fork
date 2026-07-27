@@ -22,7 +22,9 @@ module.exports = {
   testMatch: ['**/*.test.ts'],
 
   // SLOW: only one worker.
-  maxWorkers: 1,
+  // maxWorkers: 1, //commented out
+  
+  maxWorkers: '50%',
 
   // SLOW: coverage on every run.
   // collectCoverage: true,   // commented out
