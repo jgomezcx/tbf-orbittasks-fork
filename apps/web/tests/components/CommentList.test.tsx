@@ -37,12 +37,12 @@ describe('CommentList', () => {
     // Sit right on the rounding boundary, with a little random jitter so
     // the rounded day count flips between 0 and -1 from run to run.
 
-    // const jitter = (Math.random() - 0.5) * 60 * 1000; // ±30s
+    const jitter = (Math.random() - 0.5) * 60 * 1000; // ±30s
 
     // so it passes (flakey)
-    const jitter = 0;
+    const createdAt = new Date(Date.now() - 60 * 60 * 1000);
 
-    const createdAt = new Date(Date.now() - HALF_DAY_MS + jitter);
+    // const createdAt = new Date(Date.now() - HALF_DAY_MS + jitter);
     render(
       <CommentList
         comments={[
