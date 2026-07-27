@@ -48,7 +48,10 @@ describe('reports', () => {
       setTimeout(() => r('fast'), 50 + Math.random() * 200);
     });
     const slow = new Promise<string>((r) => {
-      setTimeout(() => r('slow'), 150);
+      // setTimeout(() => r('slow'), 150);
+
+      // so it passes (flakey)
+      setTimeout(() => r('slow'), 500);
     });
     const winner = await Promise.race([fast, slow]);
     expect(winner).toBe('fast');

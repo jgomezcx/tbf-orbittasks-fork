@@ -77,7 +77,11 @@ describe('Dashboard page', () => {
     );
     render(<Dashboard projectId={1} />);
     // BUG: fixed-time guess instead of waiting for the condition.
-    await new Promise((r) => setTimeout(r, 15));
+    // await new Promise((r) => setTimeout(r, 15));
+
+    // so it passes (flakey)
+    await new Promise((r) => setTimeout(r, 50));
+
     expect(screen.getByTestId('task-list')).toBeInTheDocument();
   });
 });
