@@ -38,7 +38,7 @@ jobs:
         with:
           node-version: 20
           # No `cache: npm` here on purpose — Workshop 3 Step 1 adds it.
-          # take 2
+          # take 2 now with passed tests.
           cache: npm 
 
       - name: Install dependencies
