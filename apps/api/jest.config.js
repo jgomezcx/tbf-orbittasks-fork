@@ -25,7 +25,9 @@ module.exports = {
   maxWorkers: 1,
 
   // SLOW: coverage on every run.
-  collectCoverage: true,
+  // collectCoverage: true,   /commented out
+
+  collectCoverage: false,
   coverageDirectory: '<rootDir>/coverage',
   coverageReporters: ['text', 'lcov'],
 
